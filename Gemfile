@@ -1,0 +1,8 @@
+source 'https://rubygems.org'
+gem 'asciidoctor'
+gem 'asciidoctor-diagram', '1.3.0.preview.1'
+gem 'asciidoctor-diagram-cacoo'
+gem 'asciidoctor-fopub', github: 'hnakamur/asciidoctor-fopub', branch: 'japanese'
+gem 'rake'
+gem 'filewatcher'
+gem 'nokogiri'

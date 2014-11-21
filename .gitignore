@@ -1,0 +1,4 @@
+.envrc
+cacoo-*
+*.xml
+/vendor/
