@@ -14,8 +14,7 @@ rule '.pdf' => '.adoc' do |t|
   dirname = File.dirname t.source
   basename = File.basename t.source, '.adoc'
   xml_file = "#{dirname}/#{basename}.xml"
-  fopub_path = Gem.bin_path('asciidoctor-fopub', 'fopub')
-  docbook_xsl_ja_path = File.join(File.dirname(File.dirname(fopub_path)), 'src', 'dist', 'docbook-xsl-ja')
+  docbook_xsl_ja_path = './docbook-xsl-1pac'
   sh %Q{
     bundle exec asciidoctor -a lang=ja -b docbook -d book \
       -r asciidoctor-diagram -r asciidoctor-diagram-cacoo #{t.source} && \

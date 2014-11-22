@@ -1,7 +1,6 @@
 GIT
-  remote: git://github.com/hnakamur/asciidoctor-fopub.git
-  revision: adad976219f2ee1170932597843114c19930a0c9
-  branch: japanese
+  remote: git://github.com/asciidoctor/asciidoctor-fopub.git
+  revision: e1b15e85faa4f17852a2700d751d7428e590bf4c
   specs:
     asciidoctor-fopub (0.0.1)
 
