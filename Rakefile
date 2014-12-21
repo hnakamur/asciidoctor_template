@@ -14,11 +14,10 @@ rule '.pdf' => '.adoc' do |t|
   dirname = File.dirname t.source
   basename = File.basename t.source, '.adoc'
   xml_file = "#{dirname}/#{basename}.xml"
-  docbook_xsl_ja_path = './docbook-xsl-1pac'
   sh %Q{
     bundle exec asciidoctor -a lang=ja -b docbook -d book \
       -r asciidoctor-diagram -r asciidoctor-diagram-cacoo #{t.source} && \
-    ./vendor/bin/fopub -t #{docbook_xsl_ja_path} #{xml_file} \
+    ./vendor/bin/fopub #{xml_file} \
       -param alignment left \
       -param body.font.family VL-PGothic-Regular \
       -param dingbat.font.family VL-PGothic-Regular \
